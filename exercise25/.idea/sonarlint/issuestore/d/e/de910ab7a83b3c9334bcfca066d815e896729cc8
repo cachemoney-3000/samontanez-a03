@@ -1,0 +1,8 @@
+
+S	java:S106"9Replace this use of System.out or System.err by a logger.(Æİêùÿÿÿÿ
+]	java:S125""<This block of commented-out lines of code should be removed.(ã”êùûÿÿÿÿ8ğ¯ûƒÁ/
+A
+java:S16597"&Declare "hasDigit" on a separate line.(‚¹°Íıÿÿÿÿ
+B
+java:S16598",Declare "hasSpecialChar" on a separate line.(ô˜•ª
+S	java:S106V"9Replace this use of System.out or System.err by a logger.(šºÆóüÿÿÿÿ
