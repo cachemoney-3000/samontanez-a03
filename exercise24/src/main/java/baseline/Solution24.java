@@ -33,7 +33,9 @@ public class Solution24 {
         System.out.println("Enter two strings and I'll tell you if they are anagrams: ");
         sol24.firstString =  sol24.readValueFromUser("Enter the first string: ");
         sol24.secondString = sol24.readValueFromUser("Enter the second string: ");
-        sol24.output(sol24.firstString, sol24.secondString); //
+
+        //calls the method output and pass the first and second string and prints the final output
+        sol24.output(sol24.firstString, sol24.secondString);
     }
 
     //Handles all the input from the user.
@@ -42,21 +44,17 @@ public class Solution24 {
         return scanner.nextLine();
     }
 
-    /*
-    isAnagram method will only return true or false:
-        if (first string length is not equal to second string length)
-            return 'false' value.
-        else
-            -compare the letters of the first and second characters
-            -if they all match
-                return 'true'
-            -if they all don't match
-                return 'false'
-     */
     public static boolean isAnagram(String first, String second){
+
+        //if the length of the first and second string do not match, return false
         if(first.length() != second.length()){
             return false;
         }
+        // else if they are the same length
+        // compare the letters of the first and second characters
+        // if all the letters match, return true
+        // if the letters don't match, return false
+
         else{
             char[] firstChar = first.toLowerCase().toCharArray();
             char[] secondChar = second.toLowerCase().toCharArray();
@@ -76,9 +74,13 @@ public class Solution24 {
      */
     private static void output(String s1, String s2){
 
+        //calls the isAnagram method
+        //if the return value of isAnagram is true, it will print that the strings are anagram
         if(isAnagram(s1, s2) == true){
             System.out.println("\""+s1+"\"" + " and " + "\""+s2+"\"" + " are anagrams.");
         }
+
+        //if the return value of isAnagram is true, it wil print that the strings are not anagram
         else
             System.out.println("\""+s1+"\"" + " and " + "\""+s2+"\"" + " are not anagrams.");
     }

@@ -1,11 +1,10 @@
 
 S	java:S106!"9Replace this use of System.out or System.err by a logger.(ş¼ø³üÿÿÿÿ
 P
-java:S2209$"5Change this instance-reference to a static reference.(±ı—âşÿÿÿÿ
-S	java:S106)"9Replace this use of System.out or System.err by a logger.(Æİêùÿÿÿÿ
-X	java:S125/"<This block of commented-out lines of code should be removed.(°¹’š8Ù„ÂşÀ/
-]	java:S125H"<This block of commented-out lines of code should be removed.(á•±úÿÿÿÿ8†ÔşÀ/
+java:S2209&"5Change this instance-reference to a static reference.(ôéÕ¡ùÿÿÿÿ
+S	java:S106+"9Replace this use of System.out or System.err by a logger.(Æİêùÿÿÿÿ
+]	java:S125F"<This block of commented-out lines of code should be removed.(á•±úÿÿÿÿ8†ÔşÀ/
 =
 java:S1125O"'Remove the unnecessary boolean literal.(ëÓØĞ
 S	java:S106P"9Replace this use of System.out or System.err by a logger.(œ–ù×øÿÿÿÿ
-S	java:S106S"9Replace this use of System.out or System.err by a logger.(‚ğÅÿÿÿÿÿ
+S	java:S106U"9Replace this use of System.out or System.err by a logger.(‚ğÅÿÿÿÿÿ
