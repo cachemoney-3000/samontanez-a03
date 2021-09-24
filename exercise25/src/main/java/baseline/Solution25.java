@@ -9,15 +9,13 @@ import java.util.Scanner;
 public class Solution25 {
     private static final Scanner scanner = new Scanner(System.in);
 
-    /*
-    Prompt user: "Create a password: "
-    String 'password' will store the user input.
-    'output' method will pass the string password and prints the result.
-     */
     public static void main(String[] args) {
         Solution25 sol25 = new Solution25();
 
+        //Prompt the user to create a password
+        //'password' will store the input
         String password = sol25.readValueFromUser("Create a password: ");
+        //calls the output method and pass the String password, this will print the final result
         sol25.output(password);
     }
 
@@ -27,62 +25,50 @@ public class Solution25 {
         return scanner.nextLine();
     }
 
-    /*
-    passwordValidator determines the password strength:
-        'x' = stores the length of the string 'password'
-        boolean: hasLetter, hasDigit, and hasSpecialChar = all initialize to false.
-            for(loops until the last letter of the 'password'){
-                if 'password' have letters
-                    hasLetter = true;
-                if 'password' have numbers
-                    hasNumbers = true;
-                if 'password' have special characters
-                    hasSpecialChar = true;
-        }
-
-        if (password have letters, numbers, special characters and length>=8)
-            password = very strong
-        else if (password have letters, numbers and length>=8)
-            password = strong
-        else if (password have letters and length<8)
-            password = weak
-        else
-            password = very weak
-     */
     public static String passwordValidator(String password){
+        //'x' stores the length of the string password
         int x = password.length();
+        //boolean hasLetter,hasDigit, and hasSpecialChar all initialized to false
         boolean hasLetter = false,
                 hasDigit = false,
                 hasSpecialChar = false;
 
+        //loops until the last character of the string 'password'
         for (char i : password.toCharArray())
         {
+            //if the 'password' have letters, hasLetter set to true
             if (Character.isLetter(i))
                 hasLetter = true;
+            //if the 'password' have digits, hasDigit set to true
             if (Character.isDigit(i))
                 hasDigit = true;
+            //if the 'password' have special characters, hasSpecialChar set to true
             if (password.matches("(?=.*[~!@#$%^&*()_-]).*"))
                 hasSpecialChar = true;
         }
 
+        //If the 'password' have letters, digits, special characters and longer than 8 characters
+        //then the password is "very strong
         if(hasLetter && hasDigit && hasSpecialChar && (x>=8))
             return "very strong";
+        //if the 'password' only have letters, digits, and longer than 8 characters
+        //then the password is "strong"
         else if(hasLetter && hasDigit && (x>=8))
             return "strong";
+        //If the 'password' only have letters but less than 8 characters
+        //then the password is "weak"
         else if(hasLetter && (x<8))
             return "weak";
+        //if the 'password' only have numbers, then the password is weak
         else
             return "very weak";
     }
 
-    /*
-    'passwordStrength' = calls the passwordValidator, pass the password string,
-                         and store the return value from passwordValidator method
-    Prints "The password <password> is a <passwordStrength> password."
-     */
-
     private void output(String password){
+        //calls the passwordValidator, pass the password string
+        //stores the return value of passwordValidator method to 'passwordStrength'
         String passwordStrength = passwordValidator(password);
+        //prints out the final results
         System.out.println("The password " + password + " is a " + passwordStrength + " password.");
     }
 
