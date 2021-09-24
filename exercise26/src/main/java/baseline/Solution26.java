@@ -7,23 +7,19 @@ import java.util.Scanner;
 
 class Solution26 {
     private static final Scanner scanner = new Scanner(System.in);
-    /*
-        Prompt user: "What is the balance?"
-            balance = stores the user input.
-        Prompt user: "What is the APR on the card (as a percent)?"
-            APR = stores the user input
-        Prompt user: "What is the monthly payment you can make?"
-            payment = stores the user input
-        call the output method to print the result.
-    */
+
     public static void main(String[] args) {
         double balance, APR, payment;
         Solution26 sol26 = new Solution26();
 
+        //prompts the user for balance and stores the input to 'balance'
         balance = sol26.readValueFromUser("What is the balance? ");
+        //prompts the user for APR and stores the input to 'APR'
         APR = sol26.readValueFromUser("What is the APR on the card (as a percent)? ");
+        //prompts the user for payment and stores the input to 'payment'
         payment = sol26.readValueFromUser("What is the monthly payment you can make? ");
 
+        //call the output method to print the final result
         output(balance, APR, payment);
     }
 
@@ -33,36 +29,25 @@ class Solution26 {
         return scanner.nextDouble();
     }
 
-    /*
-    output:
-    Prints the final result:
-        Create an object for PaymentCalculator
-        'n' = stores the return value when the calculateMonthsUntilPaidOff method was called
-        "It will take you <n> months to pay off this card."
-     */
     private static void output(double balance, double APR, double payment){
+        //create an object for paymentCalculator
         PaymentCalculator months = new PaymentCalculator();
+        //'n' stores the return value of the calculateMonthsUntilPaiOff method
         int n = (int)Math.ceil(months.calculateMonthsUntilPaidOff(APR, balance, payment));
-
+        //prints out the final result using the int 'n' (months)
         System.out.println("It will take you " + n + " months to pay off this card.");
     }
 }
 
 class PaymentCalculator{
-    /*
-    calculateMonthsUntilPaidOff method:
-        'rate' = APR/36500.0 (convert APR percent to decimal then divide by 365)
-        'months' = -(1/30) * log(1 + balance/payment * (1 - (1 + APR)^30)) / log(1 + APR)
-        Returns the number of 'months'.
-    */
     public double calculateMonthsUntilPaidOff(double APR, double balance, double payment){
         double months;
+        //rate will convert APR from percent to decimal then divided it by 365
         double rate = APR/36500.0;
-
+        //'months' stores the formula for how many months the balance will need to be paid
         months = (-(1.0/30.0) * (Math.log(1 + ((balance/payment) * (1 - (Math.pow((1 + rate), 30)))))))
                 /(Math.log(1 + rate));
+        //return the number of 'months'
         return months;
     }
-
-
 }
