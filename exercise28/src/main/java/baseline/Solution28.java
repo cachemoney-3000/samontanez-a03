@@ -26,23 +26,33 @@ public class Solution28 {
         return scanner.nextInt();
     }
 
-    public int solve(){
+    private int solve(){
         //initialize num to zero
-        //will store the input from user
-        int num = 0;
+        int[] num = {0,0,0,0,0};
         int total = 0;
         //for loop that loops until 5 numbers was entered
         for(int i = 0; i < 5; i++){
             //prompts user to enter a number
-            num = readValueFromUser("Enter a number: ");
-
-            //'total' will add the numbers as they were entered by the user
-            total += num;
+            //store the input to array of num
+            num[i] = readValueFromUser("Enter a number: ");
         }
+
         //prints the total
-        return total;
+        return (sum(num));
     }
 
+    //to make it easier for unit testing
+    //uses the array num as an input
+    public static int sum(int[] numbers){
+        int total = 0;
+
+        //loops through all the inputs and add them all
+        for(int number : numbers){
+            //'total' will add the numbers as they were entered by the user
+            total += number;
+        }
+        return total;
+    }
 }
 
 
