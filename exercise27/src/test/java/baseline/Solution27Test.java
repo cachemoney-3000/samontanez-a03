@@ -8,43 +8,25 @@ class Solution27Test {
 
     @Test
     void validateInputTest1() {
-        Solution27Testing s = new Solution27Testing();
-
-        boolean expectedFirstName = true;
-        boolean actualFirstName = s.firstNameTest("Joshua");
-        assertEquals(expectedFirstName, actualFirstName);
-
-        boolean expectedLastName = true;
-        boolean actualLastName = s.lastNameTest("Samontanez");
-        assertEquals(expectedLastName, actualLastName);
-
-        boolean expectedZIP = true;
-        boolean actualZIP = s.ZIPTest("55555");
-        assertEquals(expectedZIP, actualZIP);
-
-        boolean expectedID = true;
-        boolean actualID = s.firstNameTest("AA-1234");
-        assertEquals(expectedID, actualID);
+        Solution27 s = new Solution27();
+        Boolean[] expected = s.validateInput("Joshua", "Samontanez", "00000", "AA-1234");
+        Boolean[] actual = {true, true, true, true};
+        assertArrayEquals(expected, actual);
     }
 
     @Test
     void validateInputTest2() {
-        Solution27Testing s = new Solution27Testing();
+        Solution27 s = new Solution27();
+        Boolean[] expected = s.validateInput("J", " ", "ABCDE", "12-1234");
+        Boolean[] actual = {false, false, false, false};
+        assertArrayEquals(expected, actual);
+    }
 
-        boolean expectedFirstName = false;
-        boolean actualFirstName = s.firstNameTest("x");
-        assertEquals(expectedFirstName, actualFirstName);
-
-        boolean expectedLastName = true;
-        boolean actualLastName = s.lastNameTest("gradle");
-        assertEquals(expectedLastName, actualLastName);
-
-        boolean expectedZIP = false;
-        boolean actualZIP = s.ZIPTest("ABCDE");
-        assertEquals(expectedZIP, actualZIP);
-
-        boolean expectedID = false;
-        boolean actualID = s.IDTest("AAB-12345");
-        assertEquals(expectedID, actualID);
+    @Test
+    void validateInputTest3() {
+        Solution27 s = new Solution27();
+        Boolean[] expected = s.validateInput("Joshua", "S", "33333", "AAV-1234");
+        Boolean[] actual = {true, false, true, false};
+        assertArrayEquals(expected, actual);
     }
 }

@@ -3,6 +3,7 @@
  *  Copyright 2021 Joshua Samontanez
  */
 package baseline;
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Solution27 {
@@ -18,12 +19,13 @@ public class Solution27 {
         lastName = sol27.readValueFromUser("Enter the last name: ");
         //prompts user for the ZIP, stores the input to 'ZIP'
         ZIP = sol27.readValueFromUser("Enter the ZIP code: ");
-        //prompts user for employee ID, sotres the input to 'ID'
+        //prompts user for employee ID, stores the input to 'ID'
         ID = sol27.readValueFromUser("Enter the employee ID: ");
 
-        //calls the method validateInput, pass firstName, lastName, ZIP, and ID then prints the output.
-        validateInput(firstName, lastName, ZIP, ID);
-
+        //calls the method validateInput, pass firstName, lastName, ZIP, and ID then gets the value of the array
+        Boolean[] arr = validateInput(firstName, lastName, ZIP, ID);
+        //prints out the result by calling 'printOut' method and passing the 'arr'
+        sol27.printOut(arr);
     }
 
     //Handles all the input from the user.
@@ -32,110 +34,70 @@ public class Solution27 {
         return scanner.nextLine();
     }
 
-    public static void validateInput(String firstName, String lastName, String ZIP, String ID) {
-        //fNameBool, lNameBool, ZIPbool, IDbool all set to true
+    public static Boolean[] validateInput(String firstName, String lastName, String ZIP, String ID) {
+        //boolean array will store all the result
         //if it satisfies a condition it will change depending on the condition
-        boolean fNameBool = true,
-                lNameBool = true,
-                ZIPbool = true,
-                IDbool = true;
+        Boolean[] valInputArray = new Boolean[4];
+        Arrays.fill(valInputArray, Boolean.TRUE);
 
-        //if the firstName is less than 2 chars, set fNameBool to false, and print an output
+        //if the firstName is less than 2 chars, set valInputArray[0] to false
         if (firstName.length() < 2) {
-            fNameBool = false;
-            System.out.println("The first name must be at least 2 characters long.");
+            valInputArray[0] = false;
         }
 
-        //if the lastName is less than 2 chars, set lNameBool to false, and print an output
+        //if the lastName is less than 2 chars, set valInputArray[1] to false
         if (lastName.length() < 2) {
-            lNameBool = false;
-            System.out.println("The last name must be at least 2 characters long.");
+            valInputArray[1] = false;
         }
 
-        //if the ZIP code have letters, set ZIPbool to false, and print an output
+        //if the ZIP code have letters and is less than 5, set valInputArray[2] to false
         if (ZIP.matches("[a-zA-Z]+")){
-            ZIPbool = false;
-            System.out.println("The zipcode must be a number.");
+            valInputArray[2] = false;
         }
-        //if the length of ZIP chars is less than 5, set ZIPbool to false, then print an output
         if(ZIP.length()<5){
-            System.out.println("The zipcode must be a 5 digit number.");
-            ZIPbool = false;
+            valInputArray[2] = false;
         }
 
         //if the chars of ID is equals to 7
-        //check if it matches the format, then set IDbool to true if it satisfies the condition
+        //check if it matches the format, then set valInputArray[3] to true if it satisfies the condition
         if (ID.length() == 7) {
             if (ID.substring(0, 2).matches("[a-zA-Z]+") &&
                     ID.charAt(2) == '-' &&
                     ID.substring(3, 7).matches("[0-9]+")) {
-                IDbool = true;
+                valInputArray[3] = true;
             }
-            //if ID doesn't match the format, set IDbool to false, then print an output
+            //if ID doesn't match the format, set valInputArray[3] to false
             else {
-                IDbool = false;
-                System.out.println("The employee ID must be in the format of AA-1234.");
+                valInputArray[3] = false;
             }
         }
-        //if the characters of String ID is less than or more than 7, set IDbool to false, then print an output
-        if (ID.length() < 7 || ID.length() > 7) {
-            IDbool = false;
-            System.out.println("The employee ID must contain 7 characters.");
+        //if the characters of String ID is less than or more than 7, set valInputArray[3] to false
+        if (ID.length() != 7) {
+            valInputArray[3] = false;
         }
-        //If fNameBool, lNameBool, ZIPbool, and IDbool are still true, then no errors are found.
-        if(fNameBool == true && lNameBool == true && ZIPbool == true && IDbool == true){
+        return valInputArray;
+    }
+
+    //prints out the final output by referencing the results from the validateInput method
+    private void printOut(Boolean[] input) {
+        if (input[0] == false) {
+            System.out.println("The first name must be at least 2 characters long.");
+        }
+
+        if (input[1] == false) {
+            System.out.println("The last name must be at least 2 characters long.");
+        }
+
+        if(input[2] == false){
+            System.out.println("The zipcode must be a 5 digit number.");
+        }
+
+        if (input[3] == false) {
+            System.out.println("The employee ID must be in the format of AA-1234.");
+        }
+
+        if(input[0] == true && input[1] == true && input[2] == true && input[3] == true){
             System.out.println("No errors found");
         }
-
-    }
-}
-
-//This class will be used for unit testing
-//The methods used and the conditions are based on the class 'validateInput'
-class Solution27Testing{
-    //will test the firstName: if the length < 2, return false. If not return true.
-    public boolean firstNameTest(String firstName){
-        if (firstName.length() < 2)
-            return false;
-        else
-            return true;
-    }
-    //will test the lastName: if the length < 2, return false. If not return true.
-    public boolean lastNameTest(String lastName){
-        if (lastName.length() < 2)
-            return false;
-        else
-            return true;
-    }
-    //will test the String ID
-    public boolean IDTest(String ID){
-        //if the ID length follows the format, it will return true, if not it will return false
-        if (ID.length() == 7) {
-            if (ID.substring(0, 2).matches("[a-zA-Z]+") &&
-                    ID.charAt(2) == '-' &&
-                    ID.substring(3, 7).matches("[0-9]+")) {
-                 return true;
-            }
-            else
-                return false;
-        }
-        //if the length of ID, is greater or less than 7 chars, return false
-        if (ID.length() < 7 || ID.length() > 7)
-            return false;
-
-        else
-            return true;
-    }
-    //will test the ZIP String
-    public boolean ZIPTest(String ZIP){
-        if (ZIP.matches("[a-zA-Z]+")){
-            return false;
-        }
-        //if the length of ZIP chars is less than 5, set ZIPbool to false, then print an output
-        else if(ZIP.length()<5){
-            return false;
-        }
-        else
-            return true;
     }
 }
