@@ -1,0 +1,51 @@
+
+A
+java:S1659"&Declare "lastName" on a separate line.(Òº¥âşÿÿÿÿ
+<
+java:S1659"!Declare "ZIP" on a separate line.(Òº¥âşÿÿÿÿ
+;
+java:S1659" Declare "ID" on a separate line.(Òº¥âşÿÿÿÿ
+S	java:S106"9Replace this use of System.out or System.err by a logger.(Æİêùÿÿÿÿ
+=
+java:S1659'"'Declare "lNameBool" on a separate line.(›Ô¹Œ
+;
+java:S1659("%Declare "ZIPbool" on a separate line.(Ò­ÔĞ
+?
+java:S1659)"$Declare "IDbool" on a separate line.(øßÎ¼øÿÿÿÿ
+N	java:S106."9Replace this use of System.out or System.err by a logger.(ü™©…
+S	java:S1064"9Replace this use of System.out or System.err by a logger.(ûÑÁÿøÿÿÿÿ
+S	java:S106:"9Replace this use of System.out or System.err by a logger.(ªÌäŠüÿÿÿÿ
+S	java:S106>"9Replace this use of System.out or System.err by a logger.(”Šİæÿÿÿÿÿ
+N	java:S106M"9Replace this use of System.out or System.err by a logger.(÷çßû
+S	java:S106S"9Replace this use of System.out or System.err by a logger.(şºÿÿÿÿÿÿ
+=
+java:S1125V"'Remove the unnecessary boolean literal.(ä¶ôƒ
+=
+java:S1125V"'Remove the unnecessary boolean literal.(ä¶ôƒ
+=
+java:S1125V"'Remove the unnecessary boolean literal.(ä¶ôƒ
+=
+java:S1125V"'Remove the unnecessary boolean literal.(ä¶ôƒ
+M	java:S106W"9Replace this use of System.out or System.err by a logger.(ºŸ
+W
+java:S1126b"AReplace this if-then-else statement by a single return statement.(Í‡Ñ
+^
+java:S1126i"AReplace this if-then-else statement by a single return statement.(É±õ™8æ³®Á/
+j	java:S100o"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(İ³‘8õéÌ®Á/
+c
+java:S1126r"AReplace this if-then-else statement by a single return statement.(›ÂÊ±ıÿÿÿÿ8ÓøÎ®Á/
+c
+java:S1126{"AReplace this if-then-else statement by a single return statement.(Œë‘€ùÿÿÿÿ8ê®Ó®Á/
+k	java:S100‚"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(˜•¿ö8¨¸Ø®Á/
+d
+java:S1126‡"AReplace this if-then-else statement by a single return statement.(‹ÆÄşÿÿÿÿ8œñİ®Á/
+g
+java:S11928"JDefine a constant instead of duplicating this literal "[a-zA-Z]+" 4 times.(€®—å8Ü×Í®Á/
+k	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Òº¥âşÿÿÿÿ
+k	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Òº¥âşÿÿÿÿ
+k	java:S117#"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ÿ©‡ıÿÿÿÿ
+k	java:S117#"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ÿ©‡ıÿÿÿÿ
+f	java:S117("QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ò­ÔĞ
+k	java:S117)"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(øßÎ¼øÿÿÿÿ
+m	java:S117o"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(İ³‘8‚êÌ®Á/
+n	java:S117‚"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(˜•¿ö8¨¸Ø®Á/
