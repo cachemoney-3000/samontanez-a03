@@ -11,56 +11,111 @@ package baseline;
 * Then generate a password for the user using those inputs.
  */
 
-import java.util.Scanner;
+import java.lang.reflect.Array;
+import java.util.*;
 
 public class Solution37 {
     Scanner scanner = new Scanner(System.in);
-    private int passwordSize; //stores the desired password size
-    private int numSpecialChar; //stores how many special characters in a password
-    private int numNumbers; //stores how many numbers in a password
-    private String password; //stores the generated password
-    private static final char[] specialChar = {'!', '@', '#', '$', '%', '^', '&', '*', '+', '?'}; //all the special characters
-    private static final char[] letters = new char[52]; //26 (lowercase) + 26 (uppercase) = 52 letters
-    private static final char[] numbers = new char[10]; //number ranging 0 - 9
+
+    List<Character> specialChar; //stores the special characters
+    List<Character> letters; //26 (lowercase) + 26 (uppercase) = 52 letters
+    List<Character> numbers; //number ranging 0 - 9
 
     //constructor to initialize the values
     public Solution37(){
-
+        specialChar = new ArrayList<>();
+        listSpecial();
+        letters = new ArrayList<>();
+        listLetters();
+        numbers = new ArrayList<>();
+        listNumbers();
     }
+
     public static void main(String[] args) {
+        Solution37 sol37 = new Solution37();//stores the desired password size
+        String password; //stores the generated password
+
         //prompt user asking the minimum length of password
+        int passwordSize = sol37.readValueFromUser("What's the minimum length? ");
         //prompt user asking how many special characters
+        int numSpecialChar = sol37.readValueFromUser("How many special characters? ");
         //prompt user how many numbers
+        int numNumbers = sol37.readValueFromUser("How many numbers? ");
+
+        //stores the generated password
+        String generatedPass = sol37.generatePass(passwordSize, numSpecialChar, numNumbers);
         //print out the generated password
-
-    }
-    //method responsible for adding a numbers into the password
-    private void addNumbers(){
-
+        System.out.println("Your password is " + generatedPass);
     }
 
-    //method responsible adding special characters to the password
-    private void addSpecial(){
-
+    //initialize the values inside the 'numbers' list
+    private void listNumbers(){
+        String numList = "0123456789";
+        for(char ch: numList.toCharArray())
+            numbers.add(ch);
+    }
+    //initialize the values inside the 'letters' list
+    private void listLetters(){
+        String letterList = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+        for(char ch: letterList.toCharArray())
+            letters.add(ch);
+    }
+    //initialize the values inside the 'specialChar' list
+    private void listSpecial(){
+        String specialList = "!@#$%^&*()_+{}|:?><";
+        for(char ch: specialList.toCharArray())
+            specialChar.add(ch);
     }
 
-    //method responsible adding letters to the password
-    private void addLetters(){
-
-    }
-
-    //method responsible for the length of the password
-    private void passLength(){
-
+    //Handles all the input from the user.
+    private int readValueFromUser(String prompt) {
+        System.out.print(prompt);
+        //Do not accept input that is not a number
+        while(!scanner.hasNextInt()){
+            System.out.print(prompt);
+            scanner.next();
+        }
+        return scanner.nextInt();
     }
 
     //method responsible for generating the password
-    private void generatePass(){
+    public String generatePass(int passwordSize, int numSpecialChar, int numNumbers){
+        Random random = new Random();
+        //stores the collected characters from letters, numbers, and specialChar
+        ArrayList<Character> passwordChars = new ArrayList<>();
 
-    }
+        //loop through the number of special characters required
+        for(int i=0; i < numSpecialChar; i++)
+            //add a random special character to the 'passwordChars'
+            passwordChars.add(specialChar.get(random.nextInt(specialChar.size())));
 
-    //method responsible for printing the output
-    private void output(){
-        
+        //loop through the number of numbers required
+        for(int j=0; j < numNumbers; j++)
+            //add a random number to the 'passwordChars'
+            passwordChars.add(numbers.get(random.nextInt(numbers.size())));
+
+        //start from the remaining size of the 'passwordChars' up to the required password size
+        for(int k = passwordChars.size()-1; k < passwordSize; k++)
+            //add a letter to the remaining spot
+            passwordChars.add(letters.get(random.nextInt(letters.size())));
+
+        //shuffle the password
+        Collections.shuffle(passwordChars);
+
+        //initialize the password string
+        String password = "";
+        //loop through the completed passwordChars
+        for(Character p : passwordChars){
+            //add all the characters on passwordChars to the 'password' string
+            password += Character.toString(p);
+        }
+        //return the completed randomly generated password
+        return password;
     }
 }
+
+/*
+Code changes:
+* removed all unnecessary methods
+* changed the skeleton on the program for easier testing
+ */
