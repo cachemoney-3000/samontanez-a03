@@ -50,7 +50,7 @@ public class Solution36 {
     }
 
     //method that will convert the string to int then add them to the list
-    public void addNumber(String in){
+    private void addNumber(String in){
         try {
             int num = Integer.parseInt(in);
             //add the converted numbers to the array
