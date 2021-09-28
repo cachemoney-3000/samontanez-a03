@@ -11,7 +11,6 @@ package baseline;
 * Then generate a password for the user using those inputs.
  */
 
-import java.lang.reflect.Array;
 import java.util.*;
 
 public class Solution37 {
