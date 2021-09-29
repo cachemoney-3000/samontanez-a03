@@ -52,7 +52,7 @@
       <recent name="baseline" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.Solution35Test.winner3">
+  <component name="RunManager" selected="Gradle.Solution35Test.winner1">
     <configuration name="Solution35" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="baseline.Solution35" />
       <module name="exercise35.main" />
@@ -152,8 +152,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.Solution35Test.winner3" />
         <item itemvalue="Gradle.Solution35Test.winner1" />
+        <item itemvalue="Gradle.Solution35Test.winner3" />
         <item itemvalue="Gradle.Solution35Test.winner2" />
         <item itemvalue="Gradle.Solution35Test" />
         <item itemvalue="Application.Solution35" />

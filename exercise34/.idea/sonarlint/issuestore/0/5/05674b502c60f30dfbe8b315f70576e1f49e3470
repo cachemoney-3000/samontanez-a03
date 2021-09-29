@@ -1,0 +1,13 @@
+
+N	java:S106)"9Replace this use of System.out or System.err by a logger.(§åµÙ
+S	java:S106+"9Replace this use of System.out or System.err by a logger.(ì›úıÿÿÿÿ
+N	java:S106."9Replace this use of System.out or System.err by a logger.(ç¿Ìà
+Z	java:S1064"9Replace this use of System.out or System.err by a logger.(óåñ¾ûÿÿÿÿ8™¹áıÂ/
+I
+java:S1125T"'Remove the unnecessary boolean literal.(­šÕÅûÿÿÿÿ8ËêæıÂ/
+Z	java:S106U"9Replace this use of System.out or System.err by a logger.(îËÚ»úÿÿÿÿ8ÌêæıÂ/
+U	java:S106Y"9Replace this use of System.out or System.err by a logger.(™²Œ8ÌêæıÂ/
+7
+java:S1643="Use a StringBuilder instead.(«Ü™šøÿÿÿÿ
+7
+java:S1643i"Use a StringBuilder instead.(«Ü™šøÿÿÿÿ
