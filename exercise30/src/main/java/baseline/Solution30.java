@@ -3,16 +3,17 @@
  *  Copyright 2021 Joshua Samontanez
  */
 package baseline;
-import java.util.Scanner;
+/*
+* Create a program that generates a multiplication table for the numbers 1 through 12 (inclusive).
+ */
 
 public class Solution30 {
-    private static final Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args){
-        Solution30 sol30 = new Solution30();
-        int i = 0, j = 0;
+        int i = 0;
+        int j = 0;
         //call the method to print out the whole table
-        sol30.multiplicationTable(i,j);
+        multiplicationTable(i,j);
     }
 
     //create a method that will print the multiplication table using nested loops

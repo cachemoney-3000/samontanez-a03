@@ -1,0 +1,37 @@
+
+S	java:S106"9Replace this use of System.out or System.err by a logger.(Æİêùÿÿÿÿ
+B
+java:S1125P"'Remove the unnecessary boolean literal.(šİÑøÿÿÿÿ
+N	java:S106Q"9Replace this use of System.out or System.err by a logger.(ü™©…
+B
+java:S1125T"'Remove the unnecessary boolean literal.(©´¿¯üÿÿÿÿ
+S	java:S106U"9Replace this use of System.out or System.err by a logger.(ûÑÁÿøÿÿÿÿ
+=
+java:S1125X"'Remove the unnecessary boolean literal.(êÉ‰
+S	java:S106Y"9Replace this use of System.out or System.err by a logger.(”Šİæÿÿÿÿÿ
+=
+java:S1125\"'Remove the unnecessary boolean literal.(µŞñ
+N	java:S106]"9Replace this use of System.out or System.err by a logger.(÷çßû
+=
+java:S1125`"'Remove the unnecessary boolean literal.(ĞéÑå
+=
+java:S1125`"'Remove the unnecessary boolean literal.(ĞéÑå
+=
+java:S1125`"'Remove the unnecessary boolean literal.(ĞéÑå
+=
+java:S1125`"'Remove the unnecessary boolean literal.(ĞéÑå
+M	java:S106a"9Replace this use of System.out or System.err by a logger.(ºŸ
+f	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Èôºæ
+k	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¾®¢Åÿÿÿÿÿ
+m	java:S117""QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(™éİæ8úøûÂ/
+m	java:S117""QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(™éİæ8ûøûÂ/
+E
+java:S5411P"*Use the primitive boolean expression here.(šİÑøÿÿÿÿ
+E
+java:S5411T"*Use the primitive boolean expression here.(©´¿¯üÿÿÿÿ
+@
+java:S5411X"*Use the primitive boolean expression here.(êÉ‰
+@
+java:S5411\"*Use the primitive boolean expression here.(µŞñ
+@
+java:S5411`"*Use the primitive boolean expression here.(ĞéÑå
