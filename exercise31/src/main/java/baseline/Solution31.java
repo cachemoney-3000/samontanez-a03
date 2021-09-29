@@ -3,6 +3,11 @@
  *  Copyright 2021 Joshua Samontanez
  */
 package baseline;
+/*
+* Create a program that prompts for your age and your resting heart rate.
+* Use the Karvonen formula to determine the target heart rate based on a range of intensities from 55% to 95%.
+* Generate a table with the results as shown in the example output.
+ */
 import java.util.Arrays;
 import java.util.Scanner;
 
@@ -10,9 +15,8 @@ public class Solution31 {
     private static final Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
-        Solution31 sol31 = new Solution31();
-        int age = 0;
-        int restingHR = 0;
+        int age;
+        int restingHR;
 
         //prompt user to enter how old they are
         //loop prompt until the input is valid
@@ -31,31 +35,32 @@ public class Solution31 {
         while (restingHR < 55 || restingHR > 95);
 
         //call the rateCalc method and store the value to 'heartRate'
-        double[] targetArr = sol31.rateCalc(age, restingHR);
+        double[] targetArr = rateCalc(age, restingHR);
         //call the output method to print the result
-        sol31.output(targetArr);
+        output(targetArr);
     }
-        //method that will take care of calculation
-        public double[] rateCalc(int age, int restingHR){
-            int intensity;
-            double[] TargetHeartRate = new double[100];
-            Arrays.fill(TargetHeartRate, 0);
-            //do the calculations here
-            for(intensity = 55; intensity <= 95; intensity += 5){
-                TargetHeartRate[intensity] = (((220 - age) - restingHR) * (intensity/100.0)) + restingHR;
-            }
 
-            return TargetHeartRate;
+    //method that will take care of calculation
+    public static double[] rateCalc(int age, int restingHR){
+        int intensity;
+        double[] TargetHeartRate = new double[100];
+        Arrays.fill(TargetHeartRate, 0);
+        //do the calculations here
+        for(intensity = 55; intensity <= 95; intensity += 5){
+            TargetHeartRate[intensity] = (((220 - age) - restingHR) * (intensity/100.0)) + restingHR;
         }
 
-        //method that will print out the result
-        private void output(double[] target){
-            int intensity;
-            System.out.println("\n Intensity \t|   Rate");
-            System.out.println("-------------------------");
-            for(intensity = 55; intensity <= 95; intensity += 5){
-                System.out.println("   " + intensity + "%" + "\t\t|\t" + (int)(target[intensity]) + " bpm");
-            }
+        return TargetHeartRate;
+    }
+
+    //method that will print out the result
+    private static void output(double[] target){
+        int intensity;
+        System.out.println("\n Intensity \t|   Rate");
+        System.out.println("-------------------------");
+        for(intensity = 55; intensity <= 95; intensity += 5){
+            System.out.println("   " + intensity + "%" + "\t\t|\t" + (int)(target[intensity]) + " bpm");
         }
     }
+}
 
