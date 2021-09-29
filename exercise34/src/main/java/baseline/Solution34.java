@@ -52,7 +52,7 @@ public class Solution34 {
         System.out.println(sol34.indexToRemove(index));
     }
 
-    //method responsible for printing the employee list
+    //method responsible for printing the employee list (nothing is remove)
     private String employeeList() {
         String list = "";
         //loops until the last index of 'employees' array
