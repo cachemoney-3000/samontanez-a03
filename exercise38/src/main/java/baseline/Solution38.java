@@ -16,11 +16,17 @@ public class Solution38 {
     Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
-        String numbers = "null";
-        //stores the number into a list
-        String numberList[] = numbers.split(" ");
-        //prompts user asking to enter a number separated by spaces
+        Solution38 sol38 = new Solution38();
 
+        //prompts user asking to enter a number separated by spaces
+        String numbers = sol38.readValueFromUser("Enter a list of numbers, separated by spaces: ");
+        String numberList[] = numbers.split(" ");
+    }
+
+    //Handles all the input from the user.
+    private String readValueFromUser(String prompt) {
+        System.out.print(prompt);
+        return scanner.nextLine();
     }
 
     //method that will store each numbers into an array
