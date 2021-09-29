@@ -13,37 +13,62 @@ import java.util.*;
  */
 
 public class Solution38 {
-    Scanner scanner = new Scanner(System.in);
+    private static final Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
-        Solution38 sol38 = new Solution38();
-
         //prompts user asking to enter a number separated by spaces
-        String numbers = sol38.readValueFromUser("Enter a list of numbers, separated by spaces: ");
-        String numberList[] = numbers.split(" ");
-    }
+        System.out.print("Enter a list of numbers, separated by spaces: ");
+        String numbers = scanner.nextLine();
 
-    //Handles all the input from the user.
-    private String readValueFromUser(String prompt) {
-        System.out.print(prompt);
-        return scanner.nextLine();
-    }
-
-    //method that will store each numbers into an array
-    private void addNumbers(){
-
+        //calls the filterEvenNumber function and passing the numberList array
+        Integer[] evenNum = filterEvenNumbers(numbers);
+        //prints out the result
+        output(evenNum);
     }
 
     //method responsible for filtering the even numbers
-    public static ArrayList<Integer> filterEvenNumbers(){
+    public static Integer[] filterEvenNumbers(String numbers) {
+        //splits the numbers in the strings separated by spaces
+        String[] numberList = numbers.split(" ");
+        //declare an empty array list of Integer
+        ArrayList<Integer> evenNum = new ArrayList<>();
+
         //loop through the list to find the even numbers
-        for(int i = 0){
-            //if the number is even store it into different list
+        for (String s : numberList) {
+            //try parse-ing the string into the integer
+            try {
+                //convert the string into integer
+                int num = Integer.parseInt(s);
+                //check if the number is even number
+                if (num % 2 == 0) {
+                    //then add it into the list
+                    evenNum.add(num);
+                }
+            }
+            //catch inputs that throws a number format exception
+            catch (NumberFormatException e) {
+                System.out.println("Your list contains a non-numeric character/s.");
+            }
         }
+
+        //convert the array list to an integer array
+        Integer[] arr = new Integer[evenNum.size()];
+        arr = evenNum.toArray(arr);
+
+        //return Integer array
+        return arr;
     }
 
     //method responsible for printing the output
-    public void output(){
+    private static void output(Integer[] evenNumList) {
         //prints out the even numbers
+        System.out.print("The even numbers are ");
+        for (int i = 0; i < evenNumList.length; i++) {
+            if (i < evenNumList.length - 1) {
+                System.out.print(evenNumList[i] + " ");
+            } else {
+                System.out.print(evenNumList[i] + ".");
+            }
+        }
     }
 }

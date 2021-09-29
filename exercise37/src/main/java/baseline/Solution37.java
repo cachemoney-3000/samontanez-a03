@@ -14,7 +14,7 @@ package baseline;
 import java.util.*;
 
 public class Solution37 {
-    Scanner scanner = new Scanner(System.in);
+    private static final Scanner scanner = new Scanner(System.in);
 
     List<Character> specialChar; //stores the special characters
     List<Character> letters; //26 (lowercase) + 26 (uppercase) = 52 letters

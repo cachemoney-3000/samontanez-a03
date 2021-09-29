@@ -15,25 +15,24 @@ import java.util.Scanner;
 import java.util.Arrays;
 
 public class Solution24 {
-    private String firstString;
-    private String secondString;
-
     private static final Scanner scanner = new Scanner(System.in);
+
     public static void main(String[] args) {
-        Solution24 sol24 = new Solution24();
+        String firstString;
+        String secondString;
 
         System.out.println("Enter two strings and I'll tell you if they are anagrams: ");
         //prompt the user to enter the first string, store the input to 'firstString'
-        sol24.firstString =  sol24.readValueFromUser("Enter the first string: ");
+        firstString =  readValueFromUser("Enter the first string: ");
         //prompt the user to enter the second string, store the input to 'secondString'
-        sol24.secondString = sol24.readValueFromUser("Enter the second string: ");
+        secondString = readValueFromUser("Enter the second string: ");
 
         //calls the method output and pass the first and second string and prints the final output
-        sol24.output(sol24.firstString, sol24.secondString);
+        output(firstString, secondString);
     }
 
     //Handles all the input from the user.
-    private String readValueFromUser(String prompt) {
+    private static String readValueFromUser(String prompt) {
         System.out.print(prompt);
         return scanner.nextLine();
     }
@@ -59,7 +58,6 @@ public class Solution24 {
     }
 
     private static void output(String s1, String s2){
-
         //calls the isAnagram method
         //if the return value of isAnagram is true, it will print that the strings are anagram
         if(isAnagram(s1, s2) == true){

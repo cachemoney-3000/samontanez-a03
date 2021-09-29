@@ -3,6 +3,7 @@
  *  Copyright 2021 Joshua Samontanez
  */
 package baseline;
+
 import java.util.Scanner;
 
 class Solution26 {
