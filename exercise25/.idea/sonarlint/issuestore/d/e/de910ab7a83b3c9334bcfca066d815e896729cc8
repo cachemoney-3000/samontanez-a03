@@ -1,7 +1,7 @@
 
-S	java:S106 "9Replace this use of System.out or System.err by a logger.(Æİêùÿÿÿÿ
+S	java:S106"9Replace this use of System.out or System.err by a logger.(Æİêùÿÿÿÿ
 A
-java:S1659)"&Declare "hasDigit" on a separate line.(‚¹°Íıÿÿÿÿ
+java:S1659'"&Declare "hasDigit" on a separate line.(‚¹°Íıÿÿÿÿ
 B
-java:S1659*",Declare "hasSpecialChar" on a separate line.(ô˜•ª
-S	java:S106P"9Replace this use of System.out or System.err by a logger.(šºÆóüÿÿÿÿ
+java:S1659(",Declare "hasSpecialChar" on a separate line.(ô˜•ª
+S	java:S106N"9Replace this use of System.out or System.err by a logger.(šºÆóüÿÿÿÿ

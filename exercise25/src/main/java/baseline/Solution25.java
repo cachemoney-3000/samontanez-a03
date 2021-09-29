@@ -18,17 +18,15 @@ public class Solution25 {
     private static final Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
-        Solution25 sol25 = new Solution25();
-
         //Prompt the user to create a password
         //'password' will store the input
-        String password = sol25.readValueFromUser("Create a password: ");
+        String password = readValueFromUser("Create a password: ");
         //calls the output method and pass the String password, this will print the final result
-        sol25.output(password);
+        output(password);
     }
 
     //Handles all the input from the user.
-    private String readValueFromUser(String prompt) {
+    private static String readValueFromUser(String prompt) {
         System.out.print(prompt);
         return scanner.nextLine();
     }
@@ -72,7 +70,7 @@ public class Solution25 {
             return "very weak";
     }
 
-    private void output(String password){
+    private static void output(String password){
         //calls the passwordValidator, pass the password string
         //stores the return value of passwordValidator method to 'passwordStrength'
         String passwordStrength = passwordValidator(password);
