@@ -16,6 +16,7 @@ class Solution28Test {
         assertEquals(15, sol28.sum(numbers));
     }
 
+    @Test
     void test2() {
         Solution28 sol28 = new Solution28();
 
@@ -23,6 +24,7 @@ class Solution28Test {
         assertEquals(5, sol28.sum(numbers));
     }
 
+    @Test
     void test3() {
         Solution28 sol28 = new Solution28();
 
