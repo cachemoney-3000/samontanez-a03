@@ -6,15 +6,15 @@ package baseline;
 import java.util.Scanner;
 
 /*
-* Create a small program that contains a list of employee names.
-* Print out the list of names when the program runs the first time.
-* Prompt for an employee name and remove that specific name from the list of names.
-* Display the remaining employees, each on its own line.
+ * Create a small program that contains a list of employee names.
+ * Print out the list of names when the program runs the first time.
+ * Prompt for an employee name and remove that specific name from the list of names.
+ * Display the remaining employees, each on its own line.
  */
 
 public class Solution34 {
     //array to store the name of employees
-    private String[] employees;
+    private final String[] employees;
     private int totalEmployees;
 
     private static final Scanner scanner = new Scanner(System.in);
@@ -40,9 +40,12 @@ public class Solution34 {
         //prints how many employees
         System.out.println("There are " + sol34.totalEmployees + " employees:");
         //prints the list of names
-        System.out.println(sol34.Employeelist());
+        System.out.println(sol34.employeeList());
+
         //prompts the user to enter a name to remove
-        employeeToRemove = sol34.removeEmployeeScanner("Enter an employee name to remove: ");
+        System.out.print("Enter an employee name to remove: ");
+        employeeToRemove = scanner.nextLine();
+
         //converts the name to index, so they can be removed from the list
         index = sol34.removeEmployeeIndex(employeeToRemove);
         //prints out the final output
@@ -50,7 +53,7 @@ public class Solution34 {
     }
 
     //method responsible for printing the employee list
-    private String Employeelist() {
+    private String employeeList() {
         String list = "";
         //loops until the last index of 'employees' array
         for (int i = 0; i < totalEmployees; i++) {
@@ -60,15 +63,11 @@ public class Solution34 {
         return list;
     }
 
-    //method that responsible for scanning the input
-    private String removeEmployeeScanner(String Prompt) {
-        System.out.print(Prompt);
-        return scanner.nextLine();
-    }
-
     //method responsible for converting the employee name to index
     public int removeEmployeeIndex(String employeeRemove) {
         int index = -1;
+        int employeeCounter = totalEmployees;
+        boolean found = false;
 
         //loops through the employees array
         for (int i = 0; i < totalEmployees; i++) {
@@ -76,10 +75,18 @@ public class Solution34 {
             //return the index number where it matched
             if (employees[i].equals(employeeRemove)) {
                 index = i;
+                employeeCounter = totalEmployees - 1;
+                found = true;
             }
         }
+
+        //prints an additional line if the employee can't be found
+        if(found == false){
+            System.out.println("\nEmployee not found!");
+        }
+
         //prints out how many employees left
-        System.out.println("\nThere are " + (totalEmployees - 1) + " employees:");
+        System.out.println("\nThere are " + (employeeCounter) + " employees:");
 
         return index;
     }
@@ -88,22 +95,15 @@ public class Solution34 {
     public String indexToRemove(int removeUsingIndex) {
         String list = "";
 
-        //if the index is valid
-        if(removeUsingIndex > -1 || removeUsingIndex < totalEmployees){
-            //loops through the array to find that index
-            for (int i = 0; i < totalEmployees; i++) {
-                //if the index is found, ignore it
-                if(i == removeUsingIndex){
-                    continue;
-                }
-                //prints the employees that is not ignored
-                list += employees[i] + "\n";
+        //loops through the array to find that index
+        for (int i = 0; i < totalEmployees; i++) {
+            //if the index is found, ignore it
+            if (i == removeUsingIndex) {
+                continue;
             }
-            return list;
+            //prints the employees that is not ignored
+            list += employees[i] + "\n";
         }
-        else
-            //prints if the index is not in the range
-            return "Employee do not exist";
+        return list;
     }
 }
-
