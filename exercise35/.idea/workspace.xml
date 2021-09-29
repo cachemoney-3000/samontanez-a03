@@ -5,12 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ed170872-998b-47cf-ab64-31b5d405eaae" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../exercise39/src/test/java/baseline/Solution39Test.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../exercise36/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/../exercise36/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../exercise37/.idea/sonarlint/issuestore/0/0/006f6509eb47f2563fb49782d19636a51fc1290e" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../exercise37/.idea/sonarlint/issuestore/1/e/1e27462d08ba21031c038fb2495ff7444b2af1cb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../exercise37/.idea/sonarlint/issuestore/f/0/f07866736216be0ee2aba49e392191aeae700a35" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../exercise37/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/../exercise37/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exercise30/.idea/sonarlint/issuestore/3/9/39a521ca6004d2de0a7f6aab8bcf1656a9905e2f" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exercise30/.idea/sonarlint/issuestore/8/d/8d23fae322b5d2ed85573c6ec782950a36f968ab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exercise30/.idea/sonarlint/issuestore/f/0/f07866736216be0ee2aba49e392191aeae700a35" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exercise30/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/../exercise30/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exercise34/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/../exercise34/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/6/b6ee7cc313bae0851e64e978e1ca42ae2041cd61" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/9/c90b2e2f80b2f364c512c9fb0d44dce414b65cee" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/0/f07866736216be0ee2aba49e392191aeae700a35" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exercise39/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../exercise39/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exercise39/src/main/java/baseline/Solution39.java" beforeDir="false" afterPath="$PROJECT_DIR$/../exercise39/src/main/java/baseline/Solution39.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
