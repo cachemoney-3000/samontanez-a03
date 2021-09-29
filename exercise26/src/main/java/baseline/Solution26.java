@@ -11,21 +11,19 @@ class Solution26 {
 
     public static void main(String[] args) {
         double balance, APR, payment;
-        Solution26 sol26 = new Solution26();
-
         //prompts the user for balance and stores the input to 'balance'
-        balance = sol26.readValueFromUser("What is the balance? ");
+        balance = readValueFromUser("What is the balance? ");
         //prompts the user for APR and stores the input to 'APR'
-        APR = sol26.readValueFromUser("What is the APR on the card (as a percent)? ");
+        APR = readValueFromUser("What is the APR on the card (as a percent)? ");
         //prompts the user for payment and stores the input to 'payment'
-        payment = sol26.readValueFromUser("What is the monthly payment you can make? ");
+        payment = readValueFromUser("What is the monthly payment you can make? ");
 
         //call the output method to print the final result
         output(balance, APR, payment);
     }
 
     //Handles all the input from the user.
-    private double readValueFromUser(String prompt) {
+    private static double readValueFromUser(String prompt) {
         System.out.print(prompt);
         return scanner.nextDouble();
     }

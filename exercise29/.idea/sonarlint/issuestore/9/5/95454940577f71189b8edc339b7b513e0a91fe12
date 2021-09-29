@@ -1,9 +1,0 @@
-
-S	java:S106"9Replace this use of System.out or System.err by a logger.(ÉÏÚÖúÿÿÿÿ
-N	java:S106"9Replace this use of System.out or System.err by a logger.(±±›
-S	java:S106 "9Replace this use of System.out or System.err by a logger.(È» ğşÿÿÿÿ
-N	java:S106,"9Replace this use of System.out or System.err by a logger.( …îÏ
-
-java:S14883"dImmediately return this expression instead of assigning it to the temporary variable "rateOfReturn".(¾â‰©úÿÿÿÿ
-r
-java:S14889"\Immediately return this expression instead of assigning it to the temporary variable "year".(©¤£Ö

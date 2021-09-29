@@ -10,26 +10,23 @@ public class Solution27 {
     private static final Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
-        Solution27 sol27 = new Solution27();
-        String firstName, lastName, ZIP, ID;
-
         //prompts user for the first name, stores the input to 'firstName'
-        firstName = sol27.readValueFromUser("Enter the first name: ");
+        String firstName = readValueFromUser("Enter the first name: ");
         //prompts user for the last name, stores the input to 'lastName'
-        lastName = sol27.readValueFromUser("Enter the last name: ");
+        String lastName = readValueFromUser("Enter the last name: ");
         //prompts user for the ZIP, stores the input to 'ZIP'
-        ZIP = sol27.readValueFromUser("Enter the ZIP code: ");
+        String ZIP = readValueFromUser("Enter the ZIP code: ");
         //prompts user for employee ID, stores the input to 'ID'
-        ID = sol27.readValueFromUser("Enter the employee ID: ");
+        String ID = readValueFromUser("Enter the employee ID: ");
 
         //calls the method validateInput, pass firstName, lastName, ZIP, and ID then gets the value of the array
         Boolean[] arr = validateInput(firstName, lastName, ZIP, ID);
         //prints out the result by calling 'printOut' method and passing the 'arr'
-        sol27.printOut(arr);
+        printOut(arr);
     }
 
     //Handles all the input from the user.
-    private String readValueFromUser(String prompt) {
+    private static String readValueFromUser(String prompt) {
         System.out.print(prompt);
         return scanner.nextLine();
     }
@@ -79,7 +76,7 @@ public class Solution27 {
     }
 
     //prints out the final output by referencing the results from the validateInput method
-    private void printOut(Boolean[] input) {
+    private static void printOut(Boolean[] input) {
         if (input[0] == false) {
             System.out.println("The first name must be at least 2 characters long.");
         }
