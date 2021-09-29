@@ -20,7 +20,6 @@ public class Solution32 {
     private static final Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
-        Solution32 sol32 = new Solution32();
         char playAgain;
         //header or title
         System.out.println("Let's play Guess the Number!");
@@ -28,13 +27,16 @@ public class Solution32 {
         //the program will loop if user keep entering "y" after the program supposed to end
         do {
             //prompts the user for the difficulty level and store the level to 'level'
-            int level = Integer.parseInt(sol32.difficultyLevel());
+            int level = Integer.parseInt(difficultyLevel());
+
             //deals with generating a random number based on difficulty level
-            sol32.playAgain(level);
+            playAgain(level);
+
             //prompts user if they want to play another game
             //if they click 'y' or 'Y', the program will keep running
             System.out.print("\nDo you wish to play again (Y/N)? ");
             playAgain = scanner.next().charAt(0);
+
             System.out.println(" ");
             scanner.nextLine();
         } while (playAgain == 'y' || playAgain == 'Y');
@@ -43,7 +45,7 @@ public class Solution32 {
 
     //takes care of the difficulty level of the game
     //only accepts valid inputs, inputs must be between 1-3 only
-    private String difficultyLevel(){
+    private static String difficultyLevel(){
         String level;
         //keep asking until a valid input was entered
         do {
@@ -56,7 +58,7 @@ public class Solution32 {
     }
 
     //method that will generate a random number based on the difficulty level
-    public int key(int level){
+    public static int key(int level){
         double range = Math.pow(10, level);
         //random number will range from 1 - 10^n, n = difficulty level
         int key = (int)(range * Math.random());
@@ -64,7 +66,7 @@ public class Solution32 {
     }
 
     //method that will print out an output
-    private void playAgain(int level){
+    private static void playAgain(int level){
         int key = key(level);
         String keyStr = String.valueOf(key);
 
