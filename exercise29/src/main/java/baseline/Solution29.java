@@ -3,20 +3,22 @@
  *  Copyright 2021 Joshua Samontanez
  */
 package baseline;
+/*
+* Write a quick calculator that prompts for the rate of return on an investment
+* Calculates how many years it will take to double your investment.
+ */
 import java.util.Scanner;
 
 public class Solution29 {
     private static final Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
-        Solution29 sol29 = new Solution29();
-
         //prompt user asking for the rate of return
         //store the value to 'rate'
-        int rate = sol29.readRate("What is the rate of return? ");
+        int rate = readRate("What is the rate of return? ");
 
         //'year' will call the output method to calculate the years to double investment
-        int year = sol29.output(rate);
+        int year = output(rate);
         System.out.println("It will take " + year + " years to double your initial investment");
     }
 
@@ -38,7 +40,7 @@ public class Solution29 {
     }
 
     ////Handles all the input from the user, and do not accept bad inputs
-    private int readRate(String prompt) {
+    private static int readRate(String prompt) {
         String r;
         do{
             System.out.printf(prompt);
@@ -52,7 +54,7 @@ public class Solution29 {
         return rateOfReturn;
     }
 
-    public int output(int rate){
+    public static int output(int rate){
         //formula to determine how many years it will take to double initial investment
         int year = (72/rate);
         //returns the year
