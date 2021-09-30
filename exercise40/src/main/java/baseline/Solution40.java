@@ -107,6 +107,8 @@ public class Solution40 implements Comparable<Solution40>{
 
         String result = "";
 
+
+
         for (Solution40 employee : employeeSorted) {
             if (employee.getFirstName().toLowerCase().contains(nameSearch.toLowerCase()) ||
                 employee.getLastName().toLowerCase().contains(nameSearch.toLowerCase())) {

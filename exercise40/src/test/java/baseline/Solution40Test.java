@@ -15,11 +15,9 @@ class Solution40Test {
         String actual = Solution40.searching(search);
 
         String expected =   "Jacquelyn Jackson        | DBA                           | \n" +
-                "Jake Jacobson            | Programmer                    | \n"
-                ;
+                            "Jake Jacobson            | Programmer                    | \n";
 
         assertEquals(actual,expected);
-
     }
 
     @Test
@@ -30,11 +28,9 @@ class Solution40Test {
         String actual = Solution40.searching(search);
 
         String expected =   "Jacquelyn Jackson        | DBA                           | \n" +
-                "Jake Jacobson            | Programmer                    | \n"
-                ;
+                            "Jake Jacobson            | Programmer                    | \n";
 
         assertEquals(actual,expected);
-
     }
 
     @Test
@@ -47,6 +43,5 @@ class Solution40Test {
         String expected =   "Sally Webber             | Web Developer                 | 2015-12-18\n";
 
         assertEquals(actual,expected);
-
     }
 }
