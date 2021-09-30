@@ -18,7 +18,7 @@ public class Solution39 implements Comparable<Solution39> {
     public final String position;
     public final String separationDate;
 
-    //constructor that stores the data
+    //constructor that stores the data to where it belongs
     public Solution39(String firstName, String lastName, String position, String separationDate){
         this.firstName = firstName;
         this.lastName = lastName;
@@ -55,17 +55,17 @@ public class Solution39 implements Comparable<Solution39> {
     }
 
     //gets the full name of the employee
-    public String getFullName(){
+    private String getFullName(){
         return fullName;
     }
 
     //get the position
-    public String getPosition(){
+    private String getPosition(){
         return position;
     }
 
     //get the separation date
-    public String getSeparationDate(){
+    private String getSeparationDate(){
         return separationDate;
     }
 

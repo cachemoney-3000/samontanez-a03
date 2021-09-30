@@ -1,0 +1,15 @@
+
+o
+java:S1210c"YOverride "equals(Object obj)" to comply with the contract of the "compareTo(T o)" method.(äÿÁä
+N	java:S1062"9Replace this use of System.out or System.err by a logger.(ÊŒØ“
+N	java:S1065"9Replace this use of System.out or System.err by a logger.(½‹™Ş
+N	java:S1067"9Replace this use of System.out or System.err by a logger.(‰Ò“Ó
+U	java:S106;"9Replace this use of System.out or System.err by a logger.(¸Ãš8÷À¼»Ã/
+‹
+java:S1319 "pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(’¾¾çıÿÿÿÿ
+…
+java:S1319^"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(Çù+
+„
+java:S1319^"oThe type of the "list" object should be an interface such as "List" rather than the implementation "ArrayList".(Çù+
+>
+java:S1643q"Use a StringBuilder instead.(üÒ¬”øÿÿÿÿ8…Ç»Ã/
