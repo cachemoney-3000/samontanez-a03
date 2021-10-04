@@ -16,6 +16,7 @@ class Solution25Test {
         assertEquals(expected, actual);
     }
 
+    @Test
     void passwordValidator2() {
         Solution25 sol25 = new Solution25();
 
@@ -25,6 +26,7 @@ class Solution25Test {
         assertEquals(expected, actual);
     }
 
+    @Test
     void passwordValidator3() {
         Solution25 sol25 = new Solution25();
 
@@ -34,6 +36,7 @@ class Solution25Test {
         assertEquals(expected, actual);
     }
 
+    @Test
     void passwordValidator4() {
         Solution25 sol25 = new Solution25();
 
